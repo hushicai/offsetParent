@@ -13,7 +13,7 @@ w3c关于offsetParent的定义可以参见[此处](https://www.w3.org/TR/cssom-v
 在不同浏览器上运行，可以观察总结出以下几条规律：
 
 * position为fixed元素是没有offsetParent，但firefox统一返回body。
-* position为absolute, relative的元素的offsetParent总是为其最近的已定位的元素,没有找最近的td,th元素，再没有找body。
+* position为absolute, relative的元素的offsetParent总是为其最近的已定位的元素,没有则找最近的td,th元素，再没有找body。
 * position为static的元素的offsetParent则是先找最近的td,th元素，再没有找body。
 * body为最顶层的offsetParent。
 
